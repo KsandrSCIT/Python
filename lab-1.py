@@ -1,11 +1,8 @@
 target = int(input())
-arr = [1, 5, 9, 7, 3, 5]
-flag = True
+arr = [3,2,4]
 
 for i in range(len(arr)):
-    for j in range(len(arr)):
-        if arr[i] + arr[j] == target and flag:
+    for j in range(i + 1, len(arr)):
+        if arr[i] + arr[j] == target:
             print(i, j)
-            flag = False
-
-
+            exit()
